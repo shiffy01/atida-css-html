@@ -1,0 +1,128 @@
+:root {
+  --color-primary: #f08c00;
+  --color-primary-hover: #d97706;
+  --color-background: rgb(243, 224, 224);
+  --color-header: white;
+  --color-text: #222;
+  --color-text-light: #444;
+  --color-input-bg: #fff;
+  --color-border: #ccc;
+  --color-faq-question-bg: #f5f5f5;
+  --color-faq-question-hover: #eaeaea;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: var(--color-header);
+  color: var(--color-text);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
+}
+
+.header-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 0; 
+  }
+
+  .header-right a {
+    margin: 5px 10px;
+  }
+}
+@media(min-width: 768px){
+  .header-right{
+    margin-right: 200px;
+  }
+}
+
+
+.container {
+  margin-top: 80px; 
+  flex: 1;
+}
+
+footer {
+  background-color: var(--color-header);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  height: 70px;
+  gap: 15px;          
+  padding: 10px 0;  
+  overflow: hidden;       
+
+}
+
+
+.social-footer a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+}
+
+.social-footer img {
+  max-width: 100%;  
+  max-height: 100%; 
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-footer a:hover img {
+  transform: scale(1.2);
+}
