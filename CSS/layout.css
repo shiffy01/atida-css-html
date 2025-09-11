@@ -10,9 +10,8 @@
   --color-faq-question-bg: #e0e7ff;
   --color-faq-question-hover: #c7d2fe;
 }
-.icon {
-  filter: brightness(0) invert(1);
-}
+
+
 
 @font-face {
   font-family: 'regular';
@@ -41,9 +40,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 header {
-  background-color: var(--color-header);
-  color: white;
+  background-color: var(--color-background);
+  color: black;
   height: 80px;
   width: 100%;
   display: flex;
@@ -55,14 +55,20 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-left .logo {
   font-size: 26px;
   font-weight: bold;
-  color: white;
+  color: var(--color-primary);  
   text-decoration: none;
+}
+.header-left .logo img {
+  width: 30px;    
+  height: 30px;  
+  object-fit: contain; 
+  margin-right: 8px;
+  vertical-align: middle; 
 }
 
 .header-right {
@@ -73,15 +79,14 @@ header {
 
 .header-right a {
   text-decoration: none;
-  color: var(--color-text-light);
+  color: black;   
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .header-right a:hover {
-  color: white; 
+  color: var(--color-header);
 }
-
 
 .burger {
   display: none;
@@ -93,7 +98,9 @@ header {
   width: 35px;
   height: 35px;
   object-fit: contain;
+  filter: brightness(0); 
 }
+
 .side-panel {
   height: 100%;
   width: 250px;
@@ -101,8 +108,8 @@ header {
   position: fixed;
   top: 0;
   right: -250px;
-  background-color: var(--color-header); 
-  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  background-color: var(--color-background); 
+  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
   overflow-x: hidden;
   transition: right 0.3s ease;
   padding-top: 60px;
@@ -119,7 +126,7 @@ header {
   padding: 16px 24px;
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: black;
   font-weight: 500;
   transition: background 0.2s, color 0.2s;
   border-radius: 6px;
@@ -127,8 +134,8 @@ header {
 }
 
 .side-panel a:hover {
-  background: var(--color-primary-hover);
-  color: white;
+  background: rgba(0,0,0,0.05);
+  color: var(--color-header);
 }
 
 .side-panel .close-btn {
@@ -137,12 +144,13 @@ header {
   right: 20px; 
   font-size: 36px;
   text-decoration: none;
-  color: white;
+  color: black; 
   transition: color 0.2s;
 }
 
-
-
+.side-panel .close-btn:hover {
+  color: var(--color-header); 
+}
 
 @media (max-width: 768px) {
   .header-right {
@@ -159,28 +167,26 @@ header {
 }
 
 .footer {
-  background-color: var(--color-header);  
-  color: white;
+  background-color: var(--color-background);  
+  color: black;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
   padding: 20px;
 }
-
-.footer p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
 .footer .social-links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
   align-items: center;
+}
+
+.footer p,
+.footer .social-links a {
+  color: black;
 }
 
 .footer .social-links a img {
