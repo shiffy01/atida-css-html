@@ -1,21 +1,27 @@
 :root {
-  --color-primary: #2000f0;
-  --color-primary-hover: #0693d9;
-  --color-background: rgb(243, 224, 224);
-  --color-header: rgb(255, 255, 255);
-  --color-text: #222;
-  --color-text-light: #444;
-  --color-input-bg: #fff;
-  --color-border: #ccc;
-  --color-faq-question-bg: #f5f5f5;
-  --color-faq-question-hover: #eaeaea;
+  --color-primary: #4f46e5;        /* main indigo/purple */
+  --color-primary-hover: #6366f1;  /* lighter hover */
+  --color-background: #f5f5f5;     /* soft light gray */
+  --color-header: #4f46e5;         /* solid header color */
+  --color-text: #1f2937;           /* dark slate text */
+  --color-text-light: #d1d5db;     /* light gray text */
+  --color-input-bg: #ffffff;
+  --color-border: #e5e7eb;
+  --color-faq-question-bg: #e0e7ff;
+  --color-faq-question-hover: #c7d2fe;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: Arial, sans-serif;
+  font-family: 'Fira Sans', Arial, sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -28,7 +34,7 @@ body {
 
 header {
   background-color: var(--color-header);
-  color: var(--color-text);
+  color: white;
   height: 80px;
   width: 100%;
   display: flex;
@@ -44,7 +50,7 @@ header {
 .header-left .logo {
   font-size: 24px;
   font-weight: bold;
-  color: var(--color-primary);
+  color: white;
   text-decoration: none;
 }
 
@@ -63,9 +69,10 @@ header {
 }
 
 .header-right a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-hover);
 }
 
+/* Burger icon */
 .burger {
   display: none;
   cursor: pointer;
@@ -78,21 +85,26 @@ header {
   object-fit: contain;
 }
 
+/* Side panel slides from RIGHT */
 .side-panel {
   height: 100%;
-  width: 0; 
-  max-width: 80%;
+  width: 250px; /* fixed width */
+  max-width: 80%; /* responsive on small screens */
   position: fixed;
   top: 0;
-  right: 0; 
+  right: -250px; /* hidden by default */
   background-color: #fff;
   box-shadow: -2px 0 8px rgba(0,0,0,0.3);
   overflow-x: hidden;
-  transition: 0.3s;
+  transition: right 0.3s ease;
   padding-top: 60px;
   z-index: 2000;
   display: flex;
   flex-direction: column;
+}
+
+.side-panel.open {
+  right: 0;
 }
 
 .side-panel a {
@@ -110,13 +122,14 @@ header {
 .side-panel .close-btn {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px; /* x button on right */
   font-size: 36px;
   text-decoration: none;
   color: black;
 }
 
-@media (max-width: 542px) {
+/* Mobile view */
+@media (max-width: 768px) {
   .header-right {
     display: none;
   }
@@ -125,13 +138,15 @@ header {
   }
 }
 
+/* Container */
 .container {
   margin-top: 80px; 
   flex: 1;
 }
 
+/* Footer */
 .footer {
-  background-color: var(--color-header);  
+  background-color: var(--color-background);  
   color: black;
   text-align: center;
   display: flex;

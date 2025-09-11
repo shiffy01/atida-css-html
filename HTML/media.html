@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/media.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/media.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-</head>
-<body>
-   <header>
-    <div class="header-left">
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
         <a href="index.html" class="logo">Pop's Pet Shop</a>
-    </div>
-    <nav class="header-right">
+      </div>
+
+      <div class="burger" id="burger">
+        <img src="../Images/burger.png" alt="Menu" />
+      </div>
+
+      <nav class="header-right">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="media.html">Media</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
         <a href="trivia.html">Trivia</a>
-    </nav>
-</header>
+      </nav>
+
+      <div class="side-panel" id="sidePanel">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </div>
+    </header>
+
     <div class="container">
-<div class="gallery">
-   <img src="../Images/babyturtle.jpg" alt="Puppy">
-  <img src="../Images/babyturtle2.jpg" alt="Kitten">
-  <img src="../Images/dog1.jpg" alt="Parrot">
-  <img src="../Images/dog2.jpg" alt="Hamster">
-  <img src="../Images/dog3.jpg" alt="Turtle">
-  <img src="../Images/dog4.jpg" alt="Bunny">
-   <img src="../Images/dogs1.jpg" alt="Puppy">
-  <img src="../Images/dogs2.jpg" alt="Kitten">
-  <img src="../Images/turtle.jpg" alt="Parrot">
-  <img src="../Images/fish1.jpg" alt="Hamster">
-  <img src="../Images/fish2.jpg" alt="Turtle">
-  <img src="../Images/fish3.jpg" alt="Bunny">
-</div>
-<div id="popup" class="popup">
-  <span class="close">&times;</span>
-  <img id="popup-img" class="popup-img" src="" alt="Popup Image">
-</div>
-    <h2 class="videos-title">Learn How to Care for Your Pets:</h2>
+      <div class="gallery">
+        <img src="../Images/babyturtle.jpg" alt="Puppy" />
+        <img src="../Images/babyturtle2.jpg" alt="Kitten" />
+        <img src="../Images/dog1.jpg" alt="Parrot" />
+        <img src="../Images/dog2.jpg" alt="Hamster" />
+        <img src="../Images/dog3.jpg" alt="Turtle" />
+        <img src="../Images/dog4.jpg" alt="Bunny" />
+        <img src="../Images/dog5.jpg" alt="Puppy" />
+        <img src="../Images/dog1.jpg" alt="Kitten" />
+        <img src="../Images/turtle.jpg" alt="Parrot" />
+        <img src="../Images/fish1.jpg" alt="Hamster" />
+        <img src="../Images/fish2.jpg" alt="Turtle" />
+        <img src="../Images/fish3.jpg" alt="Bunny" />
+      </div>
+      <div id="popup" class="popup">
+        <span class="close">&times;</span>
+        <img id="popup-img" class="popup-img" src="" alt="Popup Image" />
+      </div>
+      <h2 class="videos-title">Learn How to Care for Your Pets:</h2>
 
-<div class="videos">
-        <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/tCkjPflRgTU" 
-  title="How to Feed Your Fish"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/IEtMxm0gZ4M" 
-  title="How to Walk Your Dog"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-
-  
-</div>
+      <div class="videos">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/tCkjPflRgTU"
+          title="How to Feed Your Fish"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/IEtMxm0gZ4M"
+          title="How to Walk Your Dog"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
     </div>
-    <footer></footer>
-   <script>
-  const images = document.querySelectorAll('.gallery img');
-  const popup = document.getElementById('popup');
-  const popupImg = document.getElementById('popup-img');
-  const closeBtn = document.querySelector('.close');
 
-  // Open popup when image clicked
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      popup.style.display = 'flex';
-      popupImg.src = img.src;
-    });
-  });
+<footer class="footer">
+  <p>@Created by Shiffy</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
+      <img src="../Images/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/thepetshopme/" target="_blank">
+      <img src="../Images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
+      <img src="../Images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
+</footer>
 
-  // Close popup on X button click
-  closeBtn.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
-
-  // Close popup if clicking outside image
-  popup.addEventListener('click', (e) => {
-    if (e.target === popup) {
-      popup.style.display = 'none';
-    }
-  });
-</script>
-
-
-</body>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/media.js"></script>
+  </body>
 </html>
-

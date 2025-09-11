@@ -61,52 +61,19 @@
 <footer class="footer">
   <p>@Created by Shiffy</p>
   <div class="social-links">
-    <a href="https://www.instagram.com" target="_blank">
+    <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
       <img src="../Images/instagram.png" alt="Instagram">
     </a>
-    <a href="https://www.facebook.com" target="_blank">
+    <a href="https://www.facebook.com/thepetshopme/" target="_blank">
       <img src="../Images/facebook.png" alt="Facebook">
     </a>
-    <a href="https://www.linkedin.com" target="_blank">
+    <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
       <img src="../Images/linkedin.png" alt="LinkedIn">
     </a>
   </div>
 </footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: false, offset: 100 });
-
-  const slides = document.querySelectorAll(".slide");
-  const slidesContainer = document.querySelector(".slides");
-  let current = 0;
-
-  function showSlide(index) {
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  document.querySelector(".next").addEventListener("click", () => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  });
-
-  document.querySelector(".prev").addEventListener("click", () => {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  });
-
-  const burger = document.getElementById("burger");
-  const sidePanel = document.getElementById("sidePanel");
-  const closeBtn = document.getElementById("closeBtn");
-
-  burger.addEventListener("click", () => {
-    sidePanel.style.width = "220px";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    sidePanel.style.width = "0";
-  });
-</script>
+<script src="../JS/main.js"></script>
 
 </body>
 </html>

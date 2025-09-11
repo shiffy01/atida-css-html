@@ -1,93 +1,3 @@
-/* .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    width: 80%;
-    margin: 40px auto; 
-}
-
-.about-section:hover {
-    transform: scale(1.02);
-}
-
-.about-section.reverse {
-    flex-direction: row-reverse;
-}
-
-.about-image img {
-    max-width: 280px;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.about-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-}
-
-.about-section:first-of-type .about-text p {
-    max-height: none;
-    overflow: visible;
-}
-
-#store-section .read-more-text {
-    max-height: 80px;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-
-#store-section .read-more-text.show {
-    max-height: 500px;
-}
-
-.read-more-btn {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #f08c00;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background-color: #d97706;
-}
-
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-section.reverse {
-        flex-direction: column;
-    }
-
-    .about-image img {
-        max-width: 80%;
-    }
-} */
 .about-section {
   display: flex;
   align-items: center;
@@ -130,22 +40,7 @@
 .about-text p {
   font-size: 16px;
   line-height: 1.6;
-  color: var(--color-text-light);
-}
-
-.about-section:first-of-type .about-text p {
-  max-height: none;
-  overflow: visible;
-}
-
-#store-section .read-more-text {
-  max-height: 80px;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-#store-section .read-more-text.show {
-  max-height: 500px;
+  color: var(--color-text); /* readable */
 }
 
 .read-more-btn {
@@ -169,11 +64,9 @@
     flex-direction: column;
     text-align: center;
   }
-
   .about-section.reverse {
     flex-direction: column;
   }
-
   .about-image img {
     max-width: 80%;
   }
