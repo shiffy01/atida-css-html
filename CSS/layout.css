@@ -22,7 +22,7 @@
 }
 @font-face {
   font-family: 'italic';
-  src: url('../Fira_Sans/FiraSans-Italic.ttf') format('truetype');
+  src: url('../Fira_Sans/FiraSans-ThinItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -141,9 +141,7 @@ header {
   transition: color 0.2s;
 }
 
-.side-panel .close-btn:hover {
-  color: var(--color-primary-hover);
-}
+
 
 
 @media (max-width: 768px) {
