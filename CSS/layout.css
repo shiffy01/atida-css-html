@@ -1,18 +1,28 @@
 :root {
-  --color-primary: #4f46e5;        /* main indigo/purple */
-  --color-primary-hover: #6366f1;  /* lighter hover */
-  --color-background: #f5f5f5;     /* soft light gray */
-  --color-header: #4f46e5;         /* solid header color */
-  --color-text: #1f2937;           /* dark slate text */
-  --color-text-light: #d1d5db;     /* light gray text */
+  --color-primary: #4f46e5;      
+  --color-primary-hover: #6366f1; 
+  --color-background: #f5f5f5;    
+  --color-header: #4f46e5;     
+  --color-text: #1f2937;          
+  --color-text-light: #d1d5db;   
   --color-input-bg: #ffffff;
   --color-border: #e5e7eb;
   --color-faq-question-bg: #e0e7ff;
   --color-faq-question-hover: #c7d2fe;
 }
+.icon {
+  filter: brightness(0) invert(1);
+}
+
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'regular';
   src: url('../Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'italic';
+  src: url('../Fira_Sans/FiraSans-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +31,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Fira Sans', Arial, sans-serif;
+  font-family: 'regular', Arial, sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -31,7 +41,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 header {
   background-color: var(--color-header);
   color: white;
@@ -39,16 +48,18 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between; 
+  padding: 0 40px;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); 
   position: fixed;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-left .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -57,11 +68,10 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  gap: 25px;
 }
 
 .header-right a {
-  margin-left: 20px;
   text-decoration: none;
   color: var(--color-text-light);
   font-weight: 500;
@@ -69,10 +79,10 @@ header {
 }
 
 .header-right a:hover {
-  color: var(--color-primary-hover);
+  color: white; 
 }
 
-/* Burger icon */
+
 .burger {
   display: none;
   cursor: pointer;
@@ -84,16 +94,14 @@ header {
   height: 35px;
   object-fit: contain;
 }
-
-/* Side panel slides from RIGHT */
 .side-panel {
   height: 100%;
-  width: 250px; /* fixed width */
-  max-width: 80%; /* responsive on small screens */
+  width: 250px;
+  max-width: 80%;
   position: fixed;
   top: 0;
-  right: -250px; /* hidden by default */
-  background-color: #fff;
+  right: -250px;
+  background-color: var(--color-header); 
   box-shadow: -2px 0 8px rgba(0,0,0,0.3);
   overflow-x: hidden;
   transition: right 0.3s ease;
@@ -108,27 +116,36 @@ header {
 }
 
 .side-panel a {
-  padding: 12px 24px;
+  padding: 16px 24px;
   text-decoration: none;
   font-size: 18px;
-  color: var(--color-text);
-  transition: background 0.2s;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 6px;
+  margin: 4px 10px;
 }
 
 .side-panel a:hover {
-  background: var(--color-faq-question-hover);
+  background: var(--color-primary-hover);
+  color: white;
 }
 
 .side-panel .close-btn {
   position: absolute;
   top: 10px;
-  right: 20px; /* x button on right */
+  right: 20px; 
   font-size: 36px;
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: color 0.2s;
 }
 
-/* Mobile view */
+.side-panel .close-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+
 @media (max-width: 768px) {
   .header-right {
     display: none;
@@ -138,16 +155,14 @@ header {
   }
 }
 
-/* Container */
 .container {
   margin-top: 80px; 
   flex: 1;
 }
 
-/* Footer */
 .footer {
-  background-color: var(--color-background);  
-  color: black;
+  background-color: var(--color-header);  
+  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;

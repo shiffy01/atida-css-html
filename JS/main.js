@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
   AOS.init({ duration: 800, once: false, offset: 100 });
 
   const slides = document.querySelectorAll(".slide");
@@ -23,9 +24,10 @@
   const closeBtn = document.getElementById("closeBtn");
 
   burger.addEventListener("click", () => {
-    sidePanel.style.width = "220px";
+    sidePanel.classList.add("open");
   });
 
   closeBtn.addEventListener("click", () => {
-    sidePanel.style.width = "0";
+    sidePanel.classList.remove("open");
   });
+});
