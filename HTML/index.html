@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/layout.css" />
-    <link rel="stylesheet" href="../CSS/index.css" />
-    <!-- AOS CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop's Pet Shop</title>
+  <link rel="stylesheet" href="../CSS/layout.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
 
-  <body>
-    <header>
-      <div class="header-left">
-        <a href="index.html" class="logo">Pop's Pet Shop</a>
-      </div>
-      <nav class="header-right">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="media.html">Media</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="trivia.html">Trivia</a>
-      </nav>
-    </header>
+<header>
+  <div class="header-left">
+    <a href="index.html" class="logo">Pop's Pet Shop</a>
+  </div>
 
-    <div class="container">
-      <div class="slider">
-        <button class="prev">❮</button>
-        <div class="slides">
-          <div class="slide">
-            <img src="../Images/girl&fish.jpg" alt="Pic 1" />
-          </div>
-          <div class="slide">
-            <img src="../Images/blackhamster.jpg" alt="Pic 2" />
-          </div>
-          <div class="slide">
-            <img src="../Images/girl&dog.jpg" alt="Pic 3" />
-          </div>
-          <div class="slide">
-            <img src="../Images/store.jpg" alt="Pic 4" />
-          </div>
-        </div>
-        <button class="next">❯</button>
-      </div>
+  <!-- Burger icon -->
+  <div class="burger" id="burger">
+    <img src="../Images/burger.png" alt="Menu">
+  </div>
 
-      <div class="other-content">
-        <div class="side" data-aos="fade-right"></div>
-          <div class="center">
-        <a href="birds.html"> <div class="center-rect" id="birds"></div></a>
-        <a href="dogs.html"> <div class="center-rect"  id="dogs"></div></a>
-        <a href="fish.html"> <div class="center-rect"  id="fish"></div></a>
+  <!-- Normal menu (desktop) -->
+  <nav class="header-right">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="media.html">Media</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
 
-      </div>
-      
-     <div class="side" data-aos="fade-left"></div>
+  <!-- Side panel (mobile) -->
+  <div class="side-panel" id="sidePanel">
+    <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="media.html">Media</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="trivia.html">Trivia</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="slider">
+    <button class="prev">❮</button>
+    <div class="slides">
+      <div class="slide"><img src="../Images/girl&fish.jpg" alt="Pic 1"></div>
+      <div class="slide"><img src="../Images/blackhamster.jpg" alt="Pic 2"></div>
+      <div class="slide"><img src="../Images/girl&dog.jpg" alt="Pic 3"></div>
+      <div class="slide"><img src="../Images/store.jpg" alt="Pic 4"></div>
     </div>
-   <footer class="footer">
+    <button class="next">❯</button>
+  </div>
+
+  <div class="other-content">
+    <a href="birds.html"><div class="side" id="birds" data-aos="fade-right"></div></a>
+    <a href="dogs.html"><div class="center"></div></a>
+    <a href="fish.html"><div class="side" id="fish" data-aos="fade-left"></div></a>
+  </div>
+</div>
+
+<footer class="footer">
   <p>@Created by Shiffy</p>
   <div class="social-links">
     <a href="https://www.instagram.com" target="_blank">
@@ -74,33 +76,43 @@
   </div>
 </footer>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({ duration: 800, once: false, offset: 100 });
 
-    <script>
-       AOS.init({
-      duration: 800,
-      once: false,
-      offset: 100,
-    });
-      const slides = document.querySelectorAll(".slide");
-      const slidesContainer = document.querySelector(".slides");
-      let current = 0;
+  // Slider functionality
+  const slides = document.querySelectorAll(".slide");
+  const slidesContainer = document.querySelector(".slides");
+  let current = 0;
 
-      function showSlide(index) {
-        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-      }
+  function showSlide(index) {
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-      document.querySelector(".next").addEventListener("click", () => {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-      });
+  document.querySelector(".next").addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
 
-      document.querySelector(".prev").addEventListener("click", () => {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-      });
-    </script>
- 
+  document.querySelector(".prev").addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
 
-  </body>
+  // Burger menu functionality
+  const burger = document.getElementById("burger");
+  const sidePanel = document.getElementById("sidePanel");
+  const closeBtn = document.getElementById("closeBtn");
+
+  burger.addEventListener("click", () => {
+    sidePanel.style.width = "220px"; // open panel
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidePanel.style.width = "0"; // close panel
+  });
+</script>
+
+</body>
 </html>

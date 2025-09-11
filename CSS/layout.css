@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 header {
   background-color: var(--color-header);
   color: var(--color-text);
@@ -32,7 +33,8 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
@@ -49,7 +51,7 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 .header-right a {
@@ -64,47 +66,85 @@ header {
   color: var(--color-primary);
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-  }
+/* Burger icon */
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+}
 
+.burger img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* Side panel slides from RIGHT */
+.side-panel {
+  height: 100%;
+  width: 0; /* hidden by default */
+  max-width: 80%;
+  position: fixed;
+  top: 0;
+  right: 0; /* slide from right */
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel a {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-text);
+  transition: background 0.2s;
+}
+
+.side-panel a:hover {
+  background: var(--color-faq-question-hover);
+}
+
+/* Close button inside panel */
+.side-panel .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* fixed to right corner */
+  font-size: 36px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Mobile view */
+@media (max-width: 542px) {
   .header-right {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-    margin-left: 0; 
+    display: none;
   }
-
-  .header-right a {
-    margin: 5px 10px;
-  }
-}
-@media(min-width: 768px){
-  .header-right{
-    margin-right: 200px;
+  .burger {
+    display: block;
   }
 }
 
-
+/* Container */
 .container {
   margin-top: 80px; 
   flex: 1;
 }
 
+/* Footer */
 .footer {
-  background-color: var(color-header);  
+  background-color: var(--color-header);  
   color: black;
   text-align: center;
-  padding: 15px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 40px;
   padding: 20px;
 }
 
@@ -116,10 +156,9 @@ header {
 
 .footer .social-links {
   display: flex;
-  gap: 100px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
-
 }
 
 .footer .social-links a img {

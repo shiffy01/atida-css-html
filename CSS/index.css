@@ -3,8 +3,8 @@
   width: 100%;
   margin: 0 auto 20px auto;
   overflow: hidden;
-  border: 2px solid #ccc; 
-  border-radius: 10px; 
+  border: 2px solid #ccc;
+  border-radius: 10px;
 }
 
 .slides {
@@ -21,14 +21,15 @@
   width: 100%;
   display: block;
   object-fit: cover;
-  height: 500px; 
+  height: 500px;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
@@ -37,69 +38,39 @@
   z-index: 1;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
 
 .other-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 20px;
   margin: 50px auto;
   width: 90%;
-  min-height: 700px; 
 }
 
-.side {
-  width: 200px;  
-  height: 300px; 
-  background-color: #f08c00; 
-  color: white; 
-  justify-content: center;  
-  border-radius: 12px;   
-  padding: 10px;           
+.other-content > a > div {
+  flex: 1 1 0;              
+  min-height: 400px;      
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  width: 300px;
 }
 
-.side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100px;
+#birds {
+  background-image: url("../Images/bird4.jpg");
 }
 
 .center {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 50%;
-  
+  background-image: url("../Images/dog1.jpg");
 }
 
-
-.side-rect {
-  width: 100%;
-  height: 150px;
-  background-color: var(--color-primary);
-  border-radius: 8px;
-  border: 1px solid black;
+#fish {
+  background-image: url("../Images/fish1.jpg");
 }
-
-.center-rect {
-  width: 100%;
-  height: 300px;
-  border-radius: 12px;
-  background-size: contain; 
-}
-#birds{
-  background-image: url('../Images/headbird.jpg');
-
-}
-#dogs{
-  background-image: url('../Images/dog1.jpg');
-
-}
-#fish{
-  background-image: url('../Images/fish1.jpg');
-
-}
-
