@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   let score = 0;
+  let answeredCount = 0; // ✅ track how many answered
+
   const quizDiv = document.getElementById("quiz");
   const scoreDiv = document.getElementById("score");
 
@@ -28,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const optionsDiv = document.createElement("div");
     optionsDiv.className = "options";
 
+    const feedback = document.createElement("div");
+    feedback.className = "feedback";
+
     q.options.forEach(option => {
       const btn = document.createElement("button");
       btn.textContent = option;
@@ -35,24 +40,38 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!btn.disabled) {
           if (option === q.answer) {
             score += 20;
-            feedback.textContent = "✅ Correct!";
+            feedback.textContent = "Correct!";
             feedback.style.color = "green";
           } else {
-            feedback.textContent = `❌ Wrong! Correct answer: ${q.answer}`;
+            feedback.textContent = `Wrong! Correct answer: ${q.answer}`;
             feedback.style.color = "red";
           }
           Array.from(optionsDiv.children).forEach(b => b.disabled = true);
           scoreDiv.textContent = `Score: ${score} / 100`;
+
+          answeredCount++;
+          if (answeredCount === questions.length) {
+            showScore(score);
+          }
         }
       });
       optionsDiv.appendChild(btn);
     });
 
-    const feedback = document.createElement("div");
-    feedback.className = "feedback";
-
     itemDiv.appendChild(optionsDiv);
     itemDiv.appendChild(feedback);
     quizDiv.appendChild(itemDiv);
   });
+
+  function showScore(score) {
+    const scoreDiv = document.getElementById("score");
+    scoreDiv.innerText = `Your score: ${score} / 100`;
+
+    const refreshBtn = document.getElementById("refreshBtn");
+    refreshBtn.style.display = "block";
+
+    refreshBtn.addEventListener("click", () => {
+      location.reload();
+    });
+  }
 });

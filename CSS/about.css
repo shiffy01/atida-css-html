@@ -46,8 +46,8 @@
 .read-more-btn {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-primary-hover);
+  color: black;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -56,16 +56,16 @@
 }
 
 .read-more-btn:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-primary);
 }
 .read-more-text {
-  max-height: 120px; /* initial snippet height */
+  max-height: 120px;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 
 .read-more-text.show {
-  max-height: 1000px; /* large enough to show full text */
+  max-height: 1000px; 
 }
 
 @media (max-width: 768px) {

@@ -18,13 +18,13 @@
     padding: 10px;
     cursor: pointer;
     position: relative;
-    background-color: var(--color-faq-question-bg);
+    background-color: var(--color-primary);
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
 
   .trivia-question:hover {
-    background-color: var(--color-faq-question-hover);
+    background-color: var(--color-primary-hover);
   }
 
   .options {
@@ -44,7 +44,7 @@
   }
 
   .options button:hover:not(:disabled) {
-    background-color: var(--color-faq-question-hover);
+    background-color: var(--color-primary-hover);
     transform: scale(1.02);
   }
 
@@ -64,3 +64,20 @@
     font-weight: bold;
     text-align: center;
   }
+#refreshBtn {
+  display: none; 
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-primary-hover);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block; 
+}
+
+#refreshBtn:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.05);
+}
