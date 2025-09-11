@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({ duration: 800, once: false, offset: 100 });
 
+  // Initialize AOS if loaded
+  if (window.AOS) {
+    AOS.init({ duration: 800, once: false, offset: 100 });
+  }
+
+  // Slider
   const slides = document.querySelectorAll(".slide");
   const slidesContainer = document.querySelector(".slides");
   let current = 0;
@@ -19,15 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(current);
   });
 
+  // Burger Menu
   const burger = document.getElementById("burger");
   const sidePanel = document.getElementById("sidePanel");
   const closeBtn = document.getElementById("closeBtn");
 
   burger.addEventListener("click", () => {
-    sidePanel.classList.add("open");
+    sidePanel.classList.toggle("open");
   });
 
   closeBtn.addEventListener("click", () => {
     sidePanel.classList.remove("open");
   });
+
 });
