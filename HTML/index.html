@@ -15,12 +15,10 @@
     <a href="index.html" class="logo">Pop's Pet Shop</a>
   </div>
 
-  <!-- Burger icon -->
   <div class="burger" id="burger">
     <img src="../Images/burger.png" alt="Menu">
   </div>
 
-  <!-- Normal menu (desktop) -->
   <nav class="header-right">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -30,7 +28,6 @@
     <a href="trivia.html">Trivia</a>
   </nav>
 
-  <!-- Side panel (mobile) -->
   <div class="side-panel" id="sidePanel">
     <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
     <a href="index.html">Home</a>
@@ -78,10 +75,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  // Initialize AOS
   AOS.init({ duration: 800, once: false, offset: 100 });
 
-  // Slider functionality
   const slides = document.querySelectorAll(".slide");
   const slidesContainer = document.querySelector(".slides");
   let current = 0;
@@ -100,17 +95,16 @@
     showSlide(current);
   });
 
-  // Burger menu functionality
   const burger = document.getElementById("burger");
   const sidePanel = document.getElementById("sidePanel");
   const closeBtn = document.getElementById("closeBtn");
 
   burger.addEventListener("click", () => {
-    sidePanel.style.width = "220px"; // open panel
+    sidePanel.style.width = "220px";
   });
 
   closeBtn.addEventListener("click", () => {
-    sidePanel.style.width = "0"; // close panel
+    sidePanel.style.width = "0";
   });
 </script>
 

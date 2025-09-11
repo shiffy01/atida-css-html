@@ -66,7 +66,6 @@ header {
   color: var(--color-primary);
 }
 
-/* Burger icon */
 .burger {
   display: none;
   cursor: pointer;
@@ -79,14 +78,13 @@ header {
   object-fit: contain;
 }
 
-/* Side panel slides from RIGHT */
 .side-panel {
   height: 100%;
-  width: 0; /* hidden by default */
+  width: 0; 
   max-width: 80%;
   position: fixed;
   top: 0;
-  right: 0; /* slide from right */
+  right: 0; 
   background-color: #fff;
   box-shadow: -2px 0 8px rgba(0,0,0,0.3);
   overflow-x: hidden;
@@ -109,17 +107,15 @@ header {
   background: var(--color-faq-question-hover);
 }
 
-/* Close button inside panel */
 .side-panel .close-btn {
   position: absolute;
   top: 10px;
-  right: 10px; /* fixed to right corner */
+  right: 10px;
   font-size: 36px;
   text-decoration: none;
   color: black;
 }
 
-/* Mobile view */
 @media (max-width: 542px) {
   .header-right {
     display: none;
@@ -129,13 +125,11 @@ header {
   }
 }
 
-/* Container */
 .container {
   margin-top: 80px; 
   flex: 1;
 }
 
-/* Footer */
 .footer {
   background-color: var(--color-header);  
   color: black;
