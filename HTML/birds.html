@@ -1,82 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="stylesheet" href="../CSS/media.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop's Pet Shop</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-</head>
-<body>
-<header>
-  <div class="header-left">
-    <a href="index.html" class="logo">
-          <img src="../Images/pet-shop.png" alt="shop" class="icon">
-      Pop's Pet Shop</a>
-  </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <div class="burger" id="burger">
-    <img src="../Images/burger.png" alt="menu" class="icon">
-  </div>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../CSS/media.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="../Images/pet-shop.png" alt="shop" class="icon" />
+          Pop's Pet Shop
+        </a>
+      </div>
 
-  <nav class="header-right">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </nav>
+      <div class="burger" id="burger">
+        <img src="../Images/burger.png" alt="menu" class="icon" />
+      </div>
 
-  <div class="side-panel" id="sidePanel">
-    <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </div>
-</header>
+      <nav class="header-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </nav>
 
+      <div class="side-panel" id="sidePanel">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </div>
+    </header>
 
     <div class="container">
-        <div class="gallery">
-   <img src="../Images/bird4.jpg" alt="bird">
-  <img src="../Images/bird5.jpg" alt="bird">
-  <img src="../Images/bird6.jpg" alt="bird">
-  <img src="../Images/bird7.jpg" alt="bird">
-  <img src="../Images/bird8.jpg" alt="bird">
-  <img src="../Images/bird9.jpg" alt="bird">
-   
-</div>
-<div id="popup" class="popup">
-  <span class="close">&times;</span>
-  <img id="popup-img" class="popup-img" src="" alt="Popup Image">
-</div>
-    </div>
-    
-<footer class="footer">
-  <p>@Created by Shiffy</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
-      <img src="../Images/instagram.png" alt="Instagram"  class="icon">
-    </a>
-    <a href="https://www.facebook.com/thepetshopme/" target="_blank">
-      <img src="../Images/facebook.png" alt="Facebook" class="icon">
-    </a>
-    <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
-      <img src="../Images/linkedin.png" alt="LinkedIn" class="icon">
-    </a>
-  </div>
-</footer>
-<script src="../JS/layout.js" defer></script>
-    <script src="../JS/media.js"></script>
+      <div class="gallery">
+        <a href="../Images/bird7.jpg" data-lightbox="pets" data-title="Bird">
+          <img src="../Images/bird7.jpg" alt="bird" />
+        </a>
+        <a href="../Images/dog3.jpg" data-lightbox="pets" data-title="Dog">
+          <img src="../Images/dog3.jpg" alt="dog" />
+        </a>
+        <a href="../Images/dog6.jpg" data-lightbox="pets" data-title="Dog">
+          <img src="../Images/dog6.jpg" alt="dog" />
+        </a>
+        <a href="../Images/bird4.jpg" data-lightbox="pets" data-title="Bird">
+          <img src="../Images/bird4.jpg" alt="bird" />
+        </a>
+        <a href="../Images/dog8.jpg" data-lightbox="pets" data-title="Dog">
+          <img src="../Images/dog8.jpg" alt="dog" />
+        </a>
+        <a href="../Images/hamsters2.jpg" data-lightbox="pets" data-title="Hamster">
+          <img src="../Images/hamsters2.jpg" alt="hamster" />
+        </a>
+        <a href="../Images/fish10.jpg" data-lightbox="pets" data-title="Fish">
+          <img src="../Images/fish10.jpg" alt="fish" />
+        </a>
+      </div>
 
- 
-</body>
+    
+    </div>
+
+    <footer class="footer">
+      <p>@Created by Shiffy</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
+          <img src="../Images/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="https://www.facebook.com/thepetshopme/" target="_blank">
+          <img src="../Images/facebook.png" alt="Facebook" class="icon" />
+        </a>
+        <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
+          <img src="../Images/linkedin.png" alt="LinkedIn" class="icon" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="../JS/layout.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  </body>
 </html>
