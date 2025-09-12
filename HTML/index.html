@@ -1,24 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pop's Pet Shop</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="../CSS/layout.css">
   <link rel="stylesheet" href="../CSS/index.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+ 
 </head>
 <body>
 
 <header>
   <div class="header-left">
     <a href="index.html" class="logo">
-          <img src="../Images/pet-shop.png" alt="shop" >
-      Pop's Pet Shop</a>
+      <img src="../Images/pet-shop.png" alt="shop" >
+      Pop's Pet Shop
+    </a>
   </div>
 
   <div class="burger" id="burger">
-    <img src="../Images/burger.png" alt="menu" >
+    <img src="../Images/burger.png" alt="menu">
   </div>
 
   <nav class="header-right">
@@ -43,40 +51,40 @@
 
 <div class="container">
 
-  <div class="slider">
-    <button class="prev">❮</button>
-    <div class="slides">
-      <div class="slide"><img src="../Images/girl&fish.jpg" alt="Pic 1"></div>
-      <div class="slide"><img src="../Images/blackhamster.jpg" alt="Pic 2"></div>
-      <div class="slide"><img src="../Images/girl&dog.jpg" alt="Pic 3"></div>
-      <div class="slide"><img src="../Images/store.jpg" alt="Pic 4"></div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../Images/girl&fish.jpg" alt="Pic 1"></div>
+      <div class="swiper-slide"><img src="../Images/blackhamster.jpg" alt="Pic 2"></div>
+      <div class="swiper-slide"><img src="../Images/girl&dog.jpg" alt="Pic 3"></div>
+      <div class="swiper-slide"><img src="../Images/store.jpg" alt="Pic 4"></div>
     </div>
-    <button class="next">❯</button>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
-<div class="other-content">
-  <a href="birds.html" class="card" id="birds" data-aos="fade-right">
-    <div class="card-text">
-      <h3>Birds</h3>
-      <p>Check out our feathered friends!</p>
-    </div>
-  </a>
+  <div class="other-content">
+    <a href="birds.html" class="card" id="birds" data-aos="fade-right">
+      <div class="card-text">
+        <h3>Birds</h3>
+        <p>Check out our feathered friends!</p>
+      </div>
+    </a>
 
-  <a href="dogs.html" class="card" id="dogs">
-    <div class="card-text">
-      <h3>Dogs</h3>
-      <p>Our playful pups are waiting!</p>
-    </div>
-  </a>
+    <a href="dogs.html" class="card" id="dogs">
+      <div class="card-text">
+        <h3>Dogs</h3>
+        <p>Our playful pups are waiting!</p>
+      </div>
+    </a>
 
-  <a href="fish.html" class="card" id="fish" data-aos="fade-left">
-    <div class="card-text">
-      <h3>Fish</h3>
-      <p>Discover colorful aquatic life.</p>
-    </div>
-  </a>
-</div>
-
+    <a href="fish.html" class="card" id="fish" data-aos="fade-left">
+      <div class="card-text">
+        <h3>Fish</h3>
+        <p>Discover colorful aquatic life.</p>
+      </div>
+    </a>
+  </div>
 
 </div>
 
@@ -96,8 +104,12 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+
 <script src="../JS/layout.js" defer></script>
 <script src="../JS/index.js" defer></script>
+
 
 
 </body>

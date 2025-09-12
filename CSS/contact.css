@@ -25,7 +25,7 @@
   display: block;
   margin-top: 12px;
   font-weight: bold;
-  color: var(--color-text); /* readable */
+  color: var(--color-text);
 }
 
 .contact-form input,

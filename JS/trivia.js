@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   let score = 0;
-  let answeredCount = 0; // ✅ track how many answered
+  let answeredCount = 0;
 
   const quizDiv = document.getElementById("quiz");
   const scoreDiv = document.getElementById("score");

@@ -1,96 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/faq.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop's Pet Shop</title>
+    <link rel="stylesheet" href="../CSS/faq.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="../Images/pet-shop.png" alt="shop" class="icon" />
+          Pop's Pet Shop</a
+        >
+      </div>
 
-</head>
-<body>
-<header>
-  <div class="header-left">
-    <a href="index.html" class="logo">
-          <img src="../Images/pet-shop.png" alt="shop" class="icon">
-      Pop's Pet Shop</a>
-  </div>
+      <div class="burger" id="burger">
+        <img src="../Images/burger.png" alt="menu" class="icon" />
+      </div>
 
-  <div class="burger" id="burger">
-    <img src="../Images/burger.png" alt="menu" class="icon">
-  </div>
+      <nav class="header-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </nav>
 
-  <nav class="header-right">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </nav>
-
-  <div class="side-panel" id="sidePanel">
-    <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </div>
-</header>
+      <div class="side-panel" id="sidePanel">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </div>
+    </header>
 
     <div class="container">
-        <div class="faq-container">
-  <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
 
-  <div class="faq-item">
-    <input type="checkbox" id="q1">
-    <label for="q1" class="faq-question">What kinds of pets do you sell?</label>
-    <div class="faq-answer">
-      <p>We sell dogs, cats, birds, reptiles, fish, hamsters, and more.</p>
-    </div>
-  </div>
+        <div class="faq-item">
+          <input type="checkbox" id="q1" />
+          <label for="q1" class="faq-question"
+            >What kinds of pets do you sell?</label
+          >
+          <div class="faq-answer">
+            <p>
+              We sell a variety of pets including dogs, cats, birds, reptiles,
+              fish, hamsters, and more. Each pet comes with basic care guidance
+              and recommendations for their ideal environment.
+            </p>
+          </div>
+        </div>
 
-  <div class="faq-item">
-    <input type="checkbox" id="q2">
-    <label for="q2" class="faq-question">Do I have to take my pet to the vet?</label>
-    <div class="faq-answer">
-      <p>If you want your pet to live long, it's probably a good idea.</p>
-    </div>
-  </div>
-<div class="faq-item">
-    <input type="checkbox" id="q3">
-    <label for="q3" class="faq-question">Are there some pets it's not good to have together?</label>
-    <div class="faq-answer">
-      <p>Cats and dogs fight sometimes, but they don't kill each other. Some fish can eat each other so they would need to be in different fish tanks. Consult Pop or one of his helpers to find out which fish need to be separated.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <input type="checkbox" id="q4">
-    <label for="q4" class="faq-question">Can I adopt a pet from your store?</label>
-    <div class="faq-answer">
-      <p>No. Once you pay for it and take it home, it's yours for good.</p>
-    </div>
-  </div>
-</div>
+        <div class="faq-item">
+          <input type="checkbox" id="q2" />
+          <label for="q2" class="faq-question"
+            >Do I have to take my pet to the vet?</label
+          >
+          <div class="faq-answer">
+            <p>
+              While not legally required, it is highly recommended to take your
+              pet to the vet for regular check-ups, vaccinations, and preventive
+              care. This helps ensure your pet stays healthy and happy over the
+              years.
+            </p>
+          </div>
+        </div>
 
+        <div class="faq-item">
+          <input type="checkbox" id="q3" />
+          <label for="q3" class="faq-question"
+            >Are there some pets it's not good to have together?</label
+          >
+          <div class="faq-answer">
+            <p>
+              Yes, certain pets should not be kept together. For example, cats
+              and dogs may fight if they aren’t properly introduced. Some fish
+              species are predatory and will eat smaller fish, so they require
+              separate tanks. Always check compatibility and consult Pop or one
+              of our staff for advice before mixing pets.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="q4" />
+          <label for="q4" class="faq-question"
+            >Can I adopt a pet from your store?</label
+          >
+          <div class="faq-answer">
+            <p>
+              Yes! We have an adoption program for pets looking for a loving
+              home. Adoption includes guidance on care and a starter kit to help
+              your new pet settle comfortably into your home.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-<footer class="footer">
-  <p>@Created by Shiffy</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
-      <img src="../Images/instagram.png" alt="Instagram"  class="icon">
-    </a>
-    <a href="https://www.facebook.com/thepetshopme/" target="_blank">
-      <img src="../Images/facebook.png" alt="Facebook" class="icon">
-    </a>
-    <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
-      <img src="../Images/linkedin.png" alt="LinkedIn" class="icon">
-    </a>
-  </div>
-</footer>
-<script src="../JS/layout.js" defer></script>
-</body>
+    <footer class="footer">
+      <p>@Created by Shiffy</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
+          <img src="../Images/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="https://www.facebook.com/thepetshopme/" target="_blank">
+          <img src="../Images/facebook.png" alt="Facebook" class="icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3"
+          target="_blank"
+        >
+          <img src="../Images/linkedin.png" alt="LinkedIn" class="icon" />
+        </a>
+      </div>
+    </footer>
+    <script src="../JS/layout.js" defer></script>
+  </body>
 </html>

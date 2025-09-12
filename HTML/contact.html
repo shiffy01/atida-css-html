@@ -1,79 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../CSS/contact.css">
-    <link rel="stylesheet" href="../CSS/layout.css">
-</head>
-<body>
-<header>
-  <div class="header-left">
-    <a href="index.html" class="logo">
-      <img src="../Images/pet-shop.png" alt="shop" class="icon">
-      Pop's Pet Shop
-    </a>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop's Pet Shop</title>
+    <link rel="stylesheet" href="../CSS/contact.css" />
+    <link rel="stylesheet" href="../CSS/layout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="../Images/pet-shop.png" alt="shop" class="icon" />
+          Pop's Pet Shop
+        </a>
+      </div>
 
-  <div class="burger" id="burger">
-    <img src="../Images/burger.png" alt="menu" class="icon">
-  </div>
+      <div class="burger" id="burger">
+        <img src="../Images/burger.png" alt="menu" class="icon" />
+      </div>
 
-  <nav class="header-right">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </nav>
+      <nav class="header-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </nav>
 
-  <div class="side-panel" id="sidePanel">
-    <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="trivia.html">Trivia</a>
-  </div>
-</header>
+      <div class="side-panel" id="sidePanel">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="media.html">Media</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="trivia.html">Trivia</a>
+      </div>
+    </header>
 
-<div class="container">
-    <div class="contact-form">
+    <div class="container">
+      <div class="contact-form">
         <h2>Contact Us</h2>
         <form id="contactForm" action="thanks.html" method="get" novalidate>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
 
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" placeholder="Enter your email" required>
-<small id="emailError" style="color:red; padding-left:4px; padding-top:2px; display:none;">Please enter a valid email.</small>
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" placeholder="Write your comment..." required></textarea>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <small
+            id="emailError"
+            style="
+              color: red;
+              padding-left: 4px;
+              padding-top: 2px;
+              display: none;
+            "
+            >Please enter a valid email.</small
+          >
+          <label for="comment">Comment:</label>
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Write your comment..."
+            required
+          ></textarea>
 
-            <button type="submit">Send</button>
+          <button type="submit">Send</button>
         </form>
+      </div>
     </div>
-</div>
 
-<footer class="footer">
-  <p>@Created by Shiffy</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
-      <img src="../Images/instagram.png" alt="Instagram"  class="icon">
-    </a>
-    <a href="https://www.facebook.com/thepetshopme/" target="_blank">
-      <img src="../Images/facebook.png" alt="Facebook" class="icon">
-    </a>
-    <a href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3" target="_blank">
-      <img src="../Images/linkedin.png" alt="LinkedIn" class="icon">
-    </a>
-  </div>
-</footer>
+    <footer class="footer">
+      <p>@Created by Shiffy</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/thepetshop/?hl=en" target="_blank">
+          <img src="../Images/instagram.png" alt="Instagram" class="icon" />
+        </a>
+        <a href="https://www.facebook.com/thepetshopme/" target="_blank">
+          <img src="../Images/facebook.png" alt="Facebook" class="icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/search/results/people/?firstName=Pet&lastName=Shop&origin=SEO_PSERP&sid=nz3"
+          target="_blank"
+        >
+          <img src="../Images/linkedin.png" alt="LinkedIn" class="icon" />
+        </a>
+      </div>
+    </footer>
 
-<script src="../JS/layout.js" defer></script>
-<script src="../JS/contact.js" defer></script>
-</body>
+    <script src="../JS/layout.js" defer></script>
+    <script src="../JS/contact.js" defer></script>
+  </body>
 </html>
